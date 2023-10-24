@@ -1,2 +1,31 @@
-package domain.menu;public class Menu {
+package domain.menu;
+
+import java.util.List;
+
+public class Menu {
+    private int id;
+    private String name;
+    private String description;
+
+    private List<Product> products;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public String printAllProducts() {
+        return this.products.toString();
+    }
 }
