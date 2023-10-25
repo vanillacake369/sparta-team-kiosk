@@ -1,6 +1,7 @@
 package domain.menu;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Menu {
     private int id;
@@ -26,6 +27,19 @@ public class Menu {
     }
 
     public String printAllProducts() {
-        return this.products.toString();
+        /* Product에 toString()이 구현되어있는 경우 */
+//         return products.stream()
+//                 .map(product -> product.toString())
+//                 .collect(Collectors.joining());
+
+        /* Product에 toString()이 "미구현" 되어있는 경우 */
+        return products.stream()
+                .map(product -> String.format(
+                        "Id : %s, Name : %s, Description : %s, Price : %s"
+                        , product.getId()
+                        , product.getName()
+                        , product.getDescription()
+                        , product.getPrice()))
+                .collect(Collectors.joining(Collectors.joining()));
     }
 }
