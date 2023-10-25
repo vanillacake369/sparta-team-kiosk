@@ -10,9 +10,22 @@ public class Order {
     private Cart cart; // 이부분 확신이 없습니다.
     private String requestMessage;
     private int waitingNumber;
-    private Instant orderDateTime = Instant.parse(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmZ")
-            .withZone(ZoneOffset.UTC)
-            .format(Instant.now())); //이거 확인 필요합니다.
+    private Instant orderDateTime () {
+        // 현재 UTC 날짜 및 시간을 얻습니다.
+        Instant now = Instant.now();
+
+        // ISO 8601 형식으로 변환하기 위한 포맷터 생성
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_INSTANT;
+
+        // Instant를 ISO 8601 형식의 문자열로 변환
+        String iso8601String = now.atZone(java.time.ZoneOffset.UTC).format(formatter);
+        System.out.println("ISO 8601 형식: " + iso8601String);
+        return now;
+    }
+
+//    private final Instant orderDateTime = Instant.parse(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mmZ")
+//            .withZone(ZoneOffset.UTC)
+//            .format(Instant.now())); //이거 확인 필요합니다.
 
 
     public String getRequestMessage() {
@@ -27,9 +40,7 @@ public class Order {
         return cart;
     }
 
-    public Instant getOrderDateTime() {
-        return orderDateTime;
-    }
+    public Instant getOrderDateTime() {return orderDateTime();}
 
     public int getWaitingNumber() {
         return waitingNumber;
