@@ -1,5 +1,7 @@
 package domain.menu;
 
+import domain.menu.product.Product;
+
 import java.util.List;
 
 public class Menu {
