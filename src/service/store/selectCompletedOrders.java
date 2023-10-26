@@ -14,7 +14,8 @@ public class selectCompletedOrders {
                     "주문 상품 : "+ completedOrder.getCart().getProducts() +
                     "주문 수량 : "+ completedOrder.getCart().getProductCount() +
                     "주문 금액 : "+ completedOrder.getCart().getTotalPrice() +
-                    "요청 사항 : "+ completedOrder.getRequestMessage());
+                    "요청 사항 : "+ completedOrder.getRequestMessage() +
+                    "주문 시간 : "+ completedOrder.getCompletedOrderDateTime());
         });
     }
 
