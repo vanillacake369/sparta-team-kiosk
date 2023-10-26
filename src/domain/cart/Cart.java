@@ -1,6 +1,6 @@
-package domain.menu.cart;
+package domain.cart;
 
-import domain.menu.product.Product;
+import domain.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;

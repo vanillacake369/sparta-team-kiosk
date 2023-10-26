@@ -1,5 +1,7 @@
 package domain.order;
 
+import domain.cart.Cart;
+
 import java.time.Instant;
 
 public class Order {
@@ -11,7 +13,7 @@ public class Order {
     private int waitingNumber = 0;           // 5 대기번호
 
     // ==============================================getter 구역
-    public double getTotalPrice() {
+    public double getTotalPrice(Cart cart) {
         return totalPrice;
     }                                       // 1 총가격
 

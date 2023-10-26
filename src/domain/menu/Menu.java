@@ -1,6 +1,6 @@
 package domain.menu;
 
-import domain.menu.product.Product;
+import domain.product.Product;
 
 import java.util.List;
 import java.util.stream.Collectors;

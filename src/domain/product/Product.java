@@ -1,4 +1,4 @@
-package domain.menu.product;
+package domain.product;
 
 public class Product {
     private static int id;
