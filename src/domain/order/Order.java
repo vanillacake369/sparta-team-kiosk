@@ -8,7 +8,7 @@ import java.util.List;
 public class Order {
     //============================================필드
     private double totalPrice;              // 1총가격
-//    private  double totalPrice = getTotalPrice(cart); 총 가격구하기 기능 구현 ver.2
+//    private  double totalPrice = getTotalPrice(cart);   //총 가격구하기 기능 구현 ver.2
     private Cart cart;                      // 2 장바구니(=주문 상품 목록)
     private String requestMessage;          // 3 요청사항
     private Instant orderDateTime;          // 4 주문 일시
