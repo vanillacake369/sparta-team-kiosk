@@ -1,4 +1,4 @@
-package domain.menu;
+package domain.menu.entity;
 
 import java.util.List;
 import java.util.stream.Collectors;
