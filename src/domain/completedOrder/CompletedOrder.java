@@ -2,7 +2,6 @@ package domain.completedOrder;
 
 import domain.cart.Cart;
 import domain.order.Order;
-
 import java.time.Instant;
 
 public class CompletedOrder extends Order {
@@ -11,8 +10,9 @@ public class CompletedOrder extends Order {
     public CompletedOrder(double totalPrice, Cart cart, String requestMessage,
                           Instant orderDateTime, int waitingNumber) {
         super(totalPrice, cart, requestMessage, orderDateTime, waitingNumber);
-        this.completedOrderDateTime = getCompletedOrderDateTime();
+        this.completedOrderDateTime = orderDateTime;
     }
+
     public Instant getCompletedOrderDateTime() {
         return completedOrderDateTime;
     }
