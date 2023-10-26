@@ -1,7 +1,7 @@
 package domain.completedOrder;
 
-import domain.cart.entity.Cart;
-import domain.order.entity.Order;
+import domain.cart.Cart;
+import domain.order.Order;
 
 import java.time.Instant;
 

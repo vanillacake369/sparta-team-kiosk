@@ -1,6 +1,6 @@
-package domain.order.entity;
+package domain.order;
 
-import domain.cart.entity.Cart;
+import domain.cart.Cart;
 import java.time.Instant;
 
 public class Order {
