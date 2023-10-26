@@ -14,7 +14,7 @@ public class CompletedOrder extends Order {
                           int waitingNumber,
                           Instant completedOrderDateTime) {
         super(totalPrice, cart, requestMessage, orderDateTime, waitingNumber);
-        this.completedOrderDateTime = getCompletedOrderDateTime();
+        this.completedOrderDateTime = orderDateTime;
     }
 
     public Instant getCompletedOrderDateTime() {
