@@ -1,22 +1,19 @@
-package domain.menu.cart;
+package domain.cart.entity;
 
-import domain.menu.product.Product;
-
+import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cart {
-    private List<Product> products = new ArrayList<>();
-    private int productCount;
-
+    private final List<Product> products = new ArrayList<>();
 
     public List<Product> getProducts() {
         return products;
     }
 
     public int getProductCount() {
-        return productCount;
+        return products.size();
     }
 
     public boolean addProduct(Product product) {
@@ -27,7 +24,7 @@ public class Cart {
     @Override
     public String toString() {
         return products.stream()
-                .map(product -> product.toString())
+                .map(Product::toString)
                 .collect(Collectors.joining());
     }
 
@@ -41,7 +38,6 @@ public class Cart {
     }
 
     public void clear() {
-        productCount = 0;
         products.clear();
     }
 }

@@ -1,7 +1,6 @@
 package domain.menu.entity;
 
-import domain.menu.product.Product;
-
+import domain.product.entity.Product;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,6 +41,14 @@ public class Menu {
                         , product.getName()
                         , product.getDescription()
                         , product.getPrice()))
-                .collect(Collectors.joining(Collectors.joining()));
+                .collect(Collectors.joining());
+    }
+
+    public boolean addProduct(Product product) {
+        return products.add(product) ? true : false;
+    }
+
+    public boolean removeProduct(int id) {
+        return products.removeIf(product -> product.getId() == id);
     }
 }

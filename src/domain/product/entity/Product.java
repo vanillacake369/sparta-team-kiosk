@@ -1,16 +1,30 @@
-package domain.menu.product;
+package domain.product.entity;
 
 public class Product {
-    private static int id;
+    private int id;
     private String name;
     private String description;
     private double price;
 
-    Product(int id, String name, double price, String description) {
+    public Product(int id, String name, double price, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+    }
+
+    private Product() {
+    }
+
+
+    // 생성된 메뉴의 제품 추가
+    public static Product makeProductOfNewMenu(int id, String name, double price, String description) {
+        Product product = new Product();
+        product.id = id;
+        product.name = name;
+        product.price = price;
+        product.description = description;
+        return product;
     }
 
     @Override
