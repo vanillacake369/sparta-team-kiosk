@@ -1,4 +1,4 @@
-package domain.menu.Store;
+package domain.menu.store;
 import java.util.ArrayList;
 import java.util.List;
 
