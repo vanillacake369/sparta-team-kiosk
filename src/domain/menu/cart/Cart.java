@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Cart {
     private List<Product> products = new ArrayList<>();
-    private double sum;
     private int productCount;
 
     public List<Product> getProducts() {

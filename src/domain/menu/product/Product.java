@@ -1,13 +1,13 @@
 package domain.menu.product;
 
 public class Product {
-    private static int id = 1;
+    private static int id;
     private String name;
     private String description;
     private double price;
 
-    Product(String name, double price, String description) {
-        ++id;
+    Product(int id, String name, double price, String description) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
@@ -19,7 +19,7 @@ public class Product {
     }
 
     public int getId() {
-        return ++id;
+        return id;
     }
 
     public String getName() {
