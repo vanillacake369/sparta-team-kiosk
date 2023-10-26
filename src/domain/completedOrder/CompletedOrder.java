@@ -1,6 +1,6 @@
 package domain.completedOrder;
 
-import domain.order.Order;
+import domain.order.entity.Order;
 
 import java.time.Instant;
 

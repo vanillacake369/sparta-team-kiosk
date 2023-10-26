@@ -1,5 +1,6 @@
-package domain.order;
+package domain.order.entity;
 
+import domain.cart.entity.Cart;
 import java.time.Instant;
 
 public class Order {
@@ -11,9 +12,6 @@ public class Order {
     private int waitingNumber = 0;           // 5 대기번호
 
     // ==============================================getter 구역
-    public double getTotalPrice() {
-        return totalPrice;
-    }                                       // 1 총가격
 
     public Cart getCart() {
         return cart;
@@ -34,8 +32,9 @@ public class Order {
 //==================================================메서드 구역
 
     public void inputRequestMessage(String message) throws IllegalArgumentException {
-        if (message.length() > 20)
+        if (message.length() > 20) {
             throw new IllegalArgumentException("20자 이내로 작성해주세요.");
+        }
         this.requestMessage = message;
     }                                       // 요청사항 메세지 입력
 
@@ -44,11 +43,14 @@ public class Order {
         return waitingNumber;
     }                                       // 대기번호 발급
 
-//=======================================================생성자
-    public Order() {}                       // 기본 생성자
+//==================================================생성자 구역
 
-    public Order (Cart cart, double totalPrice) {
-        this.totalPrice = getTotalPrice(cart);
-    }                                       // 총 가격구하기 기능 구현 ver.1
 
+    public Order(double totalPrice, Cart cart, String requestMessage, Instant orderDateTime, int waitingNumber) {
+        this.totalPrice = cart.getTotalPrice();
+        this.cart = cart;
+        this.requestMessage = requestMessage;
+        this.orderDateTime = orderDateTime;
+        this.waitingNumber = waitingNumber;
+    }
 }
