@@ -4,17 +4,15 @@ import domain.menu.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cart {
     private List<Product> products = new ArrayList<>();
     private int productCount;
 
+
     public List<Product> getProducts() {
         return products;
-    }
-
-    public double getSum() {
-        return sum;
     }
 
     public int getProductCount() {
@@ -25,17 +23,25 @@ public class Cart {
         return products.add(product);
     }
 
-    public String printAllProducts() {
-        return this.products.toString();
+    //printAllProduct
+    @Override
+    public String toString() {
+        return products.stream()
+                .map(product -> product.toString())
+                .collect(Collectors.joining());
     }
 
     public double getTotalPrice() {
         double totalPrice = 0.0;
+
+        for (Product product : products) {
+            totalPrice = product.getPrice() + totalPrice;
+        }
         return totalPrice;
     }
 
     public void clear() {
-        return;
+        productCount = 0;
+        products.clear();
     }
-
 }

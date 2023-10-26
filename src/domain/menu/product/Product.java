@@ -15,7 +15,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("Id : %s, | %s, | W %s, | %s\n", id, this.name, this.price, this.description);
+        return String.format("Id : %s | %s | W %s | %s\n", id, this.name, this.price, this.description);
     }
 
     public int getId() {
