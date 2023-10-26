@@ -1,6 +1,6 @@
 package domain.cart;
 
-import domain.product.Product;
+import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

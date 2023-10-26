@@ -1,6 +1,8 @@
 package service.store;
 
 
-public class selectCompletedOrders {
+import domain.completedOrder.CompletedOrder;
 
+public class selectCompletedOrders {
+    CompletedOrder completedOrder = new CompletedOrder();
 }

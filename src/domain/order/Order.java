@@ -11,7 +11,13 @@ public class Order {
     private Instant orderDateTime;          // 4 주문 일시
     private int waitingNumber = 0;           // 5 대기번호
 
-    // ==============================================getter 구역
+    public Order(double totalPrice, Cart cart, String requestMessage, Instant orderDateTime, int waitingNumber) {
+        this.totalPrice = cart.getTotalPrice();
+        this.cart = cart;
+        this.requestMessage = requestMessage;
+        this.orderDateTime = orderDateTime;
+        this.waitingNumber = waitingNumber;
+    }
 
     public Cart getCart() {
         return cart;
@@ -46,11 +52,4 @@ public class Order {
 //==================================================생성자 구역
 
 
-    public Order(double totalPrice, Cart cart, String requestMessage, Instant orderDateTime, int waitingNumber) {
-        this.totalPrice = cart.getTotalPrice();
-        this.cart = cart;
-        this.requestMessage = requestMessage;
-        this.orderDateTime = orderDateTime;
-        this.waitingNumber = waitingNumber;
-    }
 }

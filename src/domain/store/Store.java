@@ -3,7 +3,7 @@ package domain.store;
 import domain.completedOrder.CompletedOrder;
 import domain.menu.entity.Menu;
 import domain.order.Order;
-import domain.product.Product;
+import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 

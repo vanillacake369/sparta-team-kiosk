@@ -1,4 +1,4 @@
-package domain.product;
+package domain.product.entity;
 
 public class Product {
     private int id;
