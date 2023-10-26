@@ -1,9 +1,8 @@
-package service.client;
+package domain.order.service.client;
 
 import domain.cart.Cart;
 import domain.order.Order;
-import domain.product.Product;
-
+import domain.product.entity.Product;
 import java.util.Scanner;
 
 public class OrderService {
@@ -17,7 +16,6 @@ public class OrderService {
         // 1. 상품 화면에서 상품 선택 시 출력되는 화면
         //    상품 | 가격 | 설명
         //    위 메뉴를 장바구니에 추가하시겠습니까?
-
 
         // 2. 주문 화면에서 주문 선택 시 출력되는 화면
         //    아래와 같이 주문 하시겠습니까?

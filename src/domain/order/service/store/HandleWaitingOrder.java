@@ -1,4 +1,4 @@
-package service.store;
+package domain.order.service.store;
 
 import domain.order.Order;
 import domain.product.entity.Product;
