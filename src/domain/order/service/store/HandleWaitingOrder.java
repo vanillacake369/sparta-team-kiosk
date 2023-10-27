@@ -39,6 +39,8 @@ public class HandleWaitingOrder {
                 switch (doneItNumber) {
                     case 1:
                         // orders.get(handleNumber - 1); 를 완료 주문으로 보낸다. 어디로 보내야하지??
+                        orders.remove(handleNumber-1); // 완료 처리한 주문은 대기 주문 목록에서 삭제한다.
+                        System.out.println("주문이 완료되었습니다.");
                         break;
                     case 2:
                         System.out.println("주문이 완료되지 않았습니다.");
