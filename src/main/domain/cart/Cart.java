@@ -6,6 +6,19 @@ import java.util.stream.Collectors;
 import main.domain.product.entity.Product;
 
 public class Cart {
+
+    private static Cart cart;
+
+    private Cart() {
+    }
+
+    public static Cart getInstance() {
+        if (cart == null) {
+            cart = new Cart();
+        }
+        return cart;
+    }
+
     private final List<Product> products = new ArrayList<>();
 
     public List<Product> getProducts() {
