@@ -1,8 +1,8 @@
-package domain.completedOrder;
+package main.domain.completedOrder;
 
-import domain.cart.Cart;
-import domain.order.Order;
 import java.time.Instant;
+import main.domain.cart.Cart;
+import main.domain.order.Order;
 
 public class CompletedOrder extends Order {
     private Instant completedOrderDateTime;

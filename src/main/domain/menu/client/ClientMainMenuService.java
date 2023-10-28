@@ -1,4 +1,4 @@
-package domain.menu.client;
+package main.domain.menu.client;
 
 public class ClientMainMenuService {
 }

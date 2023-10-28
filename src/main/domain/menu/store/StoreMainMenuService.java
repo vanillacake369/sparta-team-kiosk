@@ -1,4 +1,4 @@
-package domain.menu.store;
+package main.domain.menu.store;
 
 public class StoreMainMenuService {
 }

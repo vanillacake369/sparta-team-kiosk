@@ -1,7 +1,7 @@
-package domain.order;
+package main.domain.order;
 
-import domain.cart.Cart;
 import java.time.Instant;
+import main.domain.cart.Cart;
 
 public class Order {
     //============================================필드

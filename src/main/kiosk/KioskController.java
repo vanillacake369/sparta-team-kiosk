@@ -1,6 +1,6 @@
-package kiosk;
+package main.kiosk;
 
-import utils.Console;
+import main.utils.ConsoleInput;
 
 public class KioskController {
     // (DB에 담겨있어야할) 비밀번호 값
@@ -11,7 +11,7 @@ public class KioskController {
         KioskView.askIfManager();
 
         // 패스워드 입력
-        String passwordInput = Console.readNextLine();
+        String passwordInput = ConsoleInput.readNextLine();
 
         // if(isManger) => do storeKiosk
         if (isManger(passwordInput)) {

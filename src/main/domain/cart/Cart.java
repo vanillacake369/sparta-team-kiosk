@@ -1,9 +1,9 @@
-package domain.cart;
+package main.domain.cart;
 
-import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import main.domain.product.entity.Product;
 
 public class Cart {
     private final List<Product> products = new ArrayList<>();

@@ -1,11 +1,11 @@
-package domain.order.service.store;
+package main.domain.order.service.store;
 
 
-import domain.completedOrder.CompletedOrder;
-import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import main.domain.completedOrder.CompletedOrder;
+import main.domain.product.entity.Product;
 
 public class SelectCompletedOrders {
     List<CompletedOrder> completedOrders = new ArrayList<>();

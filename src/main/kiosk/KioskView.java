@@ -1,4 +1,4 @@
-package kiosk;
+package main.kiosk;
 
 public class KioskView {
     public static void askIfManager() {

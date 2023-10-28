@@ -1,4 +1,4 @@
-package domain.product.entity;
+package main.domain.product.entity;
 
 
 public class Product {

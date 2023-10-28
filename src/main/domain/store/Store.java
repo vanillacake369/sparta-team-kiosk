@@ -1,11 +1,11 @@
-package domain.store;
+package main.domain.store;
 
-import domain.completedOrder.CompletedOrder;
-import domain.menu.entity.Menu;
-import domain.order.Order;
-import domain.product.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
+import main.domain.completedOrder.CompletedOrder;
+import main.domain.menu.entity.Menu;
+import main.domain.order.Order;
+import main.domain.product.entity.Product;
 
 
 public class Store {
