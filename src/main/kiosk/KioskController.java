@@ -5,18 +5,9 @@ import main.utils.ConsoleInput;
 
 public class KioskController {
 
+
     private ClientKioskController clientKioskController;
     private StoreKioskController storeKioskController;
-
-
-    /*
-     * @ImplNote
-     * protected => 하위클래스에서 접근가능
-     * 위 이유로 package private으로 둠
-     * */
-    KioskController() {
-
-    }
 
     public KioskController(ClientKioskController clientKioskController, StoreKioskController storeKioskController) {
         this.clientKioskController = clientKioskController;
@@ -31,7 +22,7 @@ public class KioskController {
     // (DB에 담겨있어야할) 비밀번호 값
     private static final String password = "1234qwer";
 
-    public void openManagerKiosk() {
+    public void runKiosk() {
         // 관리자 여부 묻기 뷰
         KioskView.askIfManager();
 
