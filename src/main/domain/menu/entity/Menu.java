@@ -43,15 +43,10 @@ public class Menu {
     }
 
     public String printAllProducts() {
-        /* Product에 toString()이 구현되어있는 경우 */
-//         return products.stream()
-//                 .map(product -> product.toString())
-//                 .collect(Collectors.joining());
-
         /* Product에 toString()이 "미구현" 되어있는 경우 */
         return products.stream()
                 .map(product -> String.format(
-                        "Id : %s, Name : %s, Description : %s, Price : %s"
+                        "Id : %s, Name : %s, Description : %s, Price : %s\n"
                         , product.getId()
                         , product.getName()
                         , product.getDescription()

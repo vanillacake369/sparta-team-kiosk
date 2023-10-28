@@ -9,6 +9,9 @@ public class KioskController {
     private ClientKioskController clientKioskController;
     private StoreKioskController storeKioskController;
 
+    public KioskController() {
+    }
+
     public KioskController(ClientKioskController clientKioskController, StoreKioskController storeKioskController) {
         this.clientKioskController = clientKioskController;
         this.storeKioskController = storeKioskController;

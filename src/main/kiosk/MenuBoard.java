@@ -30,13 +30,16 @@ public class MenuBoard {
     }
 
     Menu createBurgerMenu() {
-
         // 제품 리스트
         List<Product> burgers = new ArrayList<>();
 
         // 제품 생성부
-        Product burger = Product.createProduct("불고기버거", 6.5, "불고기로 만든 햄버거");
-        burgers.add(burger);
+        Product bulgogi = Product.createProduct("불고기버거", 6.5, "불고기로 만든 햄버거");
+        Product cheese = Product.createProduct("치즈버거", 6.5, "불고기로 만든 햄버거");
+        Product mac = Product.createProduct("맥", 6.5, "불고기로 만든 햄버거");
+        burgers.add(bulgogi);
+        burgers.add(cheese);
+        burgers.add(mac);
 
         // 메뉴 반환
         Menu burgerMenu = Menu.createMenu("버거메뉴", "햄버거에 대한 메뉴입니다.", burgers);
