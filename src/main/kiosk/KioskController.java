@@ -14,13 +14,13 @@ public class KioskController {
         String passwordInput = ConsoleInput.readNextLine();
 
         // if(isManger) => do storeKiosk
-        if (isManger(passwordInput)) {
+        if (isManager(passwordInput)) {
         }
         // else => do clientKiosk
     }
 
-    // 
-    public boolean isManger(String passwordInput) {
+    // 패스워드 확인 메서드
+    public boolean isManager(String passwordInput) {
         if (passwordInput.equals(password)) {
             return true;
         }
