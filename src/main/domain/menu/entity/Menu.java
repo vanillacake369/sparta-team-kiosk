@@ -55,7 +55,7 @@ public class Menu {
     }
 
     public boolean addProduct(Product product) {
-        return products.add(product) ? true : false;
+        return products.add(product);
     }
 
     public boolean removeProduct(int id) {

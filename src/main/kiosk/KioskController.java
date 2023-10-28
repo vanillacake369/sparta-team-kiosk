@@ -33,11 +33,16 @@ public class KioskController {
         String passwordInput = ConsoleInput.readNextLine();
 
         // if(isManger) => do storeKiosk
-        if (isManager(passwordInput)) {
-            storeKioskController.runProgram();
-        } else {
-            // else => do clientKiosk
-            clientKioskController.runProgram();
+        try {
+            if (isManager(passwordInput)) {
+                storeKioskController.runProgram();
+            } else {
+                // else => do clientKiosk
+                clientKioskController.runProgram();
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 

@@ -18,4 +18,8 @@ public class ClientMenuView {
                 ).collect(Collectors.joining());
         System.out.println(menuIntro + menuBoardState + menuOutro);
     }
+
+    public static void printProductsOf(Menu menu) {
+        System.out.println(menu.printAllProducts());
+    }
 }
