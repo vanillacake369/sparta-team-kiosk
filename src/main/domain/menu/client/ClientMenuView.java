@@ -11,7 +11,7 @@ public class ClientMenuView {
         String menuIntro = "============    MENU    ============\n";
         String menuOutro = "====================================\n";
         String menuBoardState = menus.stream()
-                .map(menu -> String.format("%s. %s. %s.\n",
+                .map(menu -> String.format("%s. %s. %s\n",
                         menu.getId(),
                         menu.getName(),
                         menu.getDescription())

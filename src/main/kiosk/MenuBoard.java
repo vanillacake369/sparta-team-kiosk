@@ -27,7 +27,7 @@ public class MenuBoard {
         menus.add(createDrinkMenu());
     }
 
-    private Menu createBurgerMenu() {
+    Menu createBurgerMenu() {
         // 제품 리스트
         List<Product> products = new ArrayList<>();
 
@@ -40,10 +40,10 @@ public class MenuBoard {
         products.add(mac);
 
         // 메뉴 반환
-        return Menu.createMenu("버거메뉴", "햄버거에 대한 메뉴입니다.", products);
+        return Menu.createMenu("버거메뉴", "햄버거에 대한 메뉴입니다", products);
     }
 
-    private Menu createDrinkMenu() {
+    Menu createDrinkMenu() {
         // 제품 리스트
         List<Product> products = new ArrayList<>();
 
@@ -54,7 +54,7 @@ public class MenuBoard {
         products.add(orangeJuice);
 
         // 메뉴 반환
-        return Menu.createMenu("음료메뉴", "음료에 대한 메뉴입니다.", products);
+        return Menu.createMenu("음료메뉴", "음료에 대한 메뉴입니다", products);
     }
 
     public List<Menu> getMenus() {
