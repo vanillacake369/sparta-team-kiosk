@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 
 public class HandleWaitingOrder {
     List<Order> orders = new ArrayList<>();
-    List<CompletedOrder> completedOrders = new ArrayList<>(); // 51번줄에 사용할 CompletedOrder 리스트
-    private static Scanner sc = new Scanner(System.in); // 34번줄 주문 번호 입력 받기
+    List<CompletedOrder> completedOrders = new ArrayList<>(); // 56번에 사용할 CompletedOrder 리스트
+    private static Scanner sc = new Scanner(System.in); // 34번, 48번 번호 입력 받기
     private static final String NUMBER_REG = "^[0-9]*$"; // 36번줄 정규 표현식 => 주문 번호 입력
 
     public HandleWaitingOrder() {
@@ -31,7 +31,7 @@ public class HandleWaitingOrder {
             System.out.println("완료시킬 주문 번호를 입력해주세요." +
                     "\n뒤로 가고 싶다면 0번을 입력해주세요");
 
-            String handleNumber = sc.nextLine();// 15번 줄을 이용하여 주문 번호 입력 받는다.
+            String handleNumber = sc.nextLine();// 16번 줄을 이용하여 주문 번호 입력 받는다.
 
             if (!Pattern.matches(NUMBER_REG, handleNumber)) {
                 System.out.println("숫자를 입력해주세요.");
@@ -46,6 +46,11 @@ public class HandleWaitingOrder {
                         "\n1. 예     2. 아니오");
 
                 String doneItNumber = sc.nextLine(); // 주문의 완료 여부를 결정한다.
+
+                if (!Pattern.matches(NUMBER_REG, doneItNumber)) {   // 입력값이 숫자가 아니면 재시작
+                    System.out.println("숫자를 입력해주세요.");
+                    continue;
+                }
                 switch (Integer.parseInt(doneItNumber)) {
                     case 1:
                         completedOrders.add((CompletedOrder) orders.get(Integer.parseInt(handleNumber) - 1));
