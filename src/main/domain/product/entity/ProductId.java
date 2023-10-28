@@ -5,6 +5,11 @@ public class ProductId {
 
     // auto increment
     public static int getIncrementedId() {
-        return ++id;
+        id += 1;
+        return id;
+    }
+
+    public static int currentId() {
+        return id;
     }
 }

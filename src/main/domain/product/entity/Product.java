@@ -7,7 +7,7 @@ public class Product {
     private String description;
     private double price;
 
-    public static Product makeProduct(String name, double price, String description) {
+    public static Product createProduct(String name, double price, String description) {
         return new Product(name, price, description);
     }
 
