@@ -1,7 +1,7 @@
 package main.domain.menu.entity;
 
 public class MenuId {
-    private static int id = 1;
+    private static int id = 0;
 
     // auto increment
     public static int getIncrementedId() {
