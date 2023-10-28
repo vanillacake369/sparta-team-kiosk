@@ -35,9 +35,10 @@ public class KioskController {
         // if(isManger) => do storeKiosk
         if (isManager(passwordInput)) {
             storeKioskController.runProgram();
+        } else {
+            // else => do clientKiosk
+            clientKioskController.runProgram();
         }
-        // else => do clientKiosk
-        clientKioskController.runProgram();
     }
 
     // 패스워드 확인 메서드
