@@ -5,10 +5,16 @@ import java.util.stream.Collectors;
 import main.domain.product.entity.Product;
 
 public class Menu {
+
+    private int id;
+    private String name;
+    private String description;
+
     private Menu() {
     }
 
     private Menu(String name, String description, List<Product> products) {
+        this.id = MenuId.getIncrementedId();
         this.name = name;
         this.description = description;
         this.products = products;
@@ -17,10 +23,6 @@ public class Menu {
     public static Menu createMenu(String name, String description, List<Product> products) {
         return new Menu(name, description, products);
     }
-
-    private static int id = 1;
-    private String name;
-    private String description;
 
     private List<Product> products;
 
@@ -63,9 +65,5 @@ public class Menu {
 
     public boolean removeProduct(int id) {
         return products.removeIf(product -> product.getId() == id);
-    }
-
-    public static void incrementId() {
-        id += 1;
     }
 }

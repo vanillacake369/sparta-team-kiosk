@@ -2,20 +2,20 @@ package main.domain.product.entity;
 
 
 public class Product {
-    private static int id = 1;
+    private int id;
     private String name;
     private String description;
     private double price;
 
-    public static Product makeProduct(int id, String name, double price, String description) {
-        return new Product(id, name, price, description);
+    public static Product makeProduct(String name, double price, String description) {
+        return new Product(name, price, description);
     }
 
 
     // @임지훈
     // private으로 막아두고 싶은데,,,여기저기서 사용되는 부분이 많음
-    public Product(int id, String name, double price, String description) {
-        this.id = id;
+    public Product(String name, double price, String description) {
+        this.id = ProductId.getIncrementedId();
         this.name = name;
         this.price = price;
         this.description = description;
@@ -56,9 +56,5 @@ public class Product {
 
     public double getPrice() {
         return price;
-    }
-
-    public static void incrementId() {
-        id += 1;
     }
 }

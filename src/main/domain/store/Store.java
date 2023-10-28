@@ -18,7 +18,7 @@ public class Store {
         // 메뉴를 찾아서 상품을 추가
         Menu menu = findMenuByName(menuName);
         if (menu != null) {
-            Product product = new Product(++id, productName, productPrice, productDescription);
+            Product product = new Product(productName, productPrice, productDescription);
             menu.addProduct(product);
             return true;
         }
