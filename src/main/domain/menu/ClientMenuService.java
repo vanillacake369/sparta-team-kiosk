@@ -1,7 +1,6 @@
-package main.domain.menu.client;
+package main.domain.menu;
 
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 
 public class ClientMenuService {

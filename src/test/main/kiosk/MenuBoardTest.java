@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
-import main.domain.menu.entity.Menu;
-import main.domain.menu.entity.MenuId;
+import main.domain.menu.Menu;
+import main.domain.menu.MenuId;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

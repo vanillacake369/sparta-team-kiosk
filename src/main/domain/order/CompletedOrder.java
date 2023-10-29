@@ -1,4 +1,4 @@
-package main.domain.completedOrder;
+package main.domain.order;
 
 import java.time.Instant;
 import main.domain.cart.Cart;

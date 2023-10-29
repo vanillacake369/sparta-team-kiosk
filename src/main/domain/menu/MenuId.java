@@ -1,4 +1,4 @@
-package main.domain.menu.entity;
+package main.domain.menu;
 
 public class MenuId {
     private static int id = 0;

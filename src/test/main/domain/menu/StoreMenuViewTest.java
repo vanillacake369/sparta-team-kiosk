@@ -1,4 +1,4 @@
-package main.domain.menu.store;
+package main.domain.menu;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
