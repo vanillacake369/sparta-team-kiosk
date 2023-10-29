@@ -1,9 +1,9 @@
-package main.domain.order.service.client;
+package main.domain.order;
 
 import java.util.Scanner;
 import main.domain.cart.Cart;
 import main.domain.order.Order;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 
 public class OrderService {
 

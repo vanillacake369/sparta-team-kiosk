@@ -1,8 +1,8 @@
-package main.domain.menu.entity;
+package main.domain.menu;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 
 public class Menu {
 

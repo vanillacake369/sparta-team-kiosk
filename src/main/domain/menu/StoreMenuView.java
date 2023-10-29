@@ -1,4 +1,4 @@
-package main.domain.menu.store;
+package main.domain.menu;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

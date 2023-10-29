@@ -1,10 +1,9 @@
-package main.domain.menu.client;
+package main.domain.menu;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import main.domain.cart.Cart;
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 
 public class ClientMenuView {

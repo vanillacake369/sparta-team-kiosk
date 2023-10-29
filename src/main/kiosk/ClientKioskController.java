@@ -1,10 +1,10 @@
 package main.kiosk;
 
 import main.domain.cart.Cart;
-import main.domain.menu.client.ClientMenuService;
-import main.domain.menu.client.ClientMenuView;
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.menu.ClientMenuService;
+import main.domain.menu.ClientMenuView;
+import main.domain.menu.Menu;
+import main.domain.product.Product;
 import main.utils.ConsoleInput;
 
 public class ClientKioskController {

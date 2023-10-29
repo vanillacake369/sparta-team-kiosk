@@ -1,14 +1,11 @@
-package domain.order.service.store;
-
-import domain.completedOrder.CompletedOrder;
-import domain.order.Order;
-import domain.product.entity.Product;
+package main.domain.order;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import main.domain.product.Product;
 
 public class HandleWaitingOrder {
     List<Order> orders = new ArrayList<>();

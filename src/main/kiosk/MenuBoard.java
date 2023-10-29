@@ -2,8 +2,8 @@ package main.kiosk;
 
 import java.util.ArrayList;
 import java.util.List;
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.menu.Menu;
+import main.domain.product.Product;
 
 public class MenuBoard {
     private static MenuBoard menuBOard;

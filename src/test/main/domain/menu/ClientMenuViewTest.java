@@ -1,9 +1,8 @@
-package main.domain.menu.client;
+package main.domain.menu;
 
 import java.util.ArrayList;
 import java.util.List;
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 import org.junit.jupiter.api.Test;
 

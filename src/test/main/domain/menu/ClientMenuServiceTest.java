@@ -1,11 +1,10 @@
-package main.domain.menu.client;
+package main.domain.menu;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
-import main.domain.menu.entity.Menu;
-import main.domain.product.entity.Product;
+import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
