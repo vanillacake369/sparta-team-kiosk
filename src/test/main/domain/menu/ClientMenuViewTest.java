@@ -2,6 +2,7 @@ package main.domain.menu;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.domain.menu.view.ClientMenuView;
 import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 import org.junit.jupiter.api.Test;

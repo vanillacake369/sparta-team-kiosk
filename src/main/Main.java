@@ -1,8 +1,8 @@
 package main;
 
-import main.kiosk.ClientKioskController;
-import main.kiosk.KioskController;
-import main.kiosk.StoreKioskController;
+import main.kiosk.controller.ClientKioskController;
+import main.kiosk.controller.KioskController;
+import main.kiosk.controller.StoreKioskController;
 
 public class Main {
     public static void main(String[] args) {

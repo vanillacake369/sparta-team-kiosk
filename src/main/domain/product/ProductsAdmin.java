@@ -1,14 +1,16 @@
-package service;
+package main.domain.product;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.InputMismatchException;
+import main.domain.product.service.CreateProductService;
+import main.domain.product.service.RemoveProductService;
 
 
 public class ProductsAdmin {
     public static void main(String[] args) {
-        List<StoreProducts> products = new ArrayList<>();
+        List<Product> products = new ArrayList<>();
         int nextProductId = 1;
         Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +27,7 @@ public class ProductsAdmin {
 
                 switch (choice) {
                     case 1:
-                        service.CreateProductService.createProduct(scanner, products, nextProductId);
+                        CreateProductService.createProduct(scanner, products, nextProductId);
                         nextProductId++; // ID 증가
                         break;
                     case 2:
@@ -38,7 +40,7 @@ public class ProductsAdmin {
                     default:
                         System.out.println("잘못된 선택입니다. 다시 시도하세요.");
                 }
-            } catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("문자 대신 1~3 중 한 숫자를 입력하세요.");
                 scanner.nextLine(); // 잘못된 입력을 넘기고 다음 입력 대기
             }

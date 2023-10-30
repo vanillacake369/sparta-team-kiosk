@@ -1,5 +1,6 @@
-package main.domain.menu;
+package main.domain.menu.service;
 
+import main.domain.menu.Menu;
 import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 

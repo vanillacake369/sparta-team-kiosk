@@ -1,8 +1,9 @@
-package main.domain.menu;
+package main.domain.menu.view;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import main.domain.cart.Cart;
+import main.domain.menu.Menu;
 import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 

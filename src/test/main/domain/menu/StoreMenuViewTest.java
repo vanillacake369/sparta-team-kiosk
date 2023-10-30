@@ -1,5 +1,6 @@
 package main.domain.menu;
 
+import main.domain.menu.view.StoreMenuView;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

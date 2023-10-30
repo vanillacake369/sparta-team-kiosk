@@ -1,4 +1,4 @@
-package main.kiosk;
+package main.kiosk.view;
 
 public class KioskView {
     public static void askIfManager() {

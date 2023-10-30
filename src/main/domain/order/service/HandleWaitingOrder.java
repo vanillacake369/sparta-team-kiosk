@@ -1,9 +1,12 @@
-package main.domain.order;
+package main.domain.order.service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import main.domain.order.CheckNumber;
+import main.domain.order.CompletedOrder;
+import main.domain.order.Order;
 import main.domain.product.Product;
 
 public class HandleWaitingOrder {
@@ -36,8 +39,6 @@ public class HandleWaitingOrder {
                 System.out.println(e.getMessage());
                 continue;
             }                                   // 잘못된 입력이 들어오면 예외처리 한다.
-
-
 
             if (handleNumber.equals("0")) { // 주문 번호가 0번 이면 while문 종료
                 break;

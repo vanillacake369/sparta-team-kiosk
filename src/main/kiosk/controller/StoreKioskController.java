@@ -1,6 +1,6 @@
-package main.kiosk;
+package main.kiosk.controller;
 
-import main.domain.menu.StoreMenuView;
+import main.domain.menu.view.StoreMenuView;
 
 public class StoreKioskController {
     public void runProgram() {
