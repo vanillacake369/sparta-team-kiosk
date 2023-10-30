@@ -1,6 +1,7 @@
-package main.kiosk;
+package main.kiosk.controller;
 
 
+import main.kiosk.view.KioskView;
 import main.utils.ConsoleInput;
 
 public class KioskController {

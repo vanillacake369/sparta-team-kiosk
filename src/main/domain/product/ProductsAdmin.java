@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import main.domain.product.service.CreateProductService;
+import main.domain.product.service.RemoveProductService;
 
 
 public class ProductsAdmin {

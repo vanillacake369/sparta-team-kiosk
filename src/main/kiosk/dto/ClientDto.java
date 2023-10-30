@@ -1,4 +1,4 @@
-package main.kiosk;
+package main.kiosk.dto;
 
 public class ClientDto {
     private final String userOption;

@@ -1,7 +1,8 @@
-package main.domain.product;
+package main.domain.product.service;
 
 import java.util.List;
 import java.util.Scanner;
+import main.domain.product.Product;
 
 public class CreateProductService {
     public static void createProduct(Scanner scanner, List<Product> products, int nextProductId) {

@@ -1,4 +1,4 @@
-package main.kiosk;
+package main.kiosk.dto;
 
 public class ClientDtoValidator {
     public static void validateDto(ClientDto clientDto) throws IllegalArgumentException {

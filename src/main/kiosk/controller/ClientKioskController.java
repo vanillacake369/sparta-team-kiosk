@@ -1,10 +1,14 @@
-package main.kiosk;
+package main.kiosk.controller;
 
 import main.domain.cart.Cart;
-import main.domain.menu.ClientMenuService;
-import main.domain.menu.ClientMenuView;
 import main.domain.menu.Menu;
+import main.domain.menu.service.ClientMenuService;
+import main.domain.menu.view.ClientMenuView;
 import main.domain.product.Product;
+import main.kiosk.MenuBoard;
+import main.kiosk.dto.ClientDto;
+import main.kiosk.dto.ClientDtoMapper;
+import main.kiosk.dto.ClientDtoValidator;
 import main.utils.ConsoleInput;
 
 public class ClientKioskController {
