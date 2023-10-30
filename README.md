@@ -20,15 +20,15 @@
     - [x]  고객용 :: 구매 화면 서비스 ⇒ addProductToCart()
 - [ ]  #2 강민형
     - [ ]  고객용 :: 주문 현황 서비스 ⇒ currentOrders()
-    - [ ]  고객용 :: 주문 화면 서비스 ⇒ orderProduct()
-    - [ ]  고객용 :: 주문 완료 화면 서비스 ⇒ makeOrder()
+    - [x]  고객용 :: 주문 화면 서비스 ⇒ orderProduct()
+    - [x]  고객용 :: 주문 완료 화면 서비스 ⇒ makeOrder()
     - [ ]  고객용 :: 주문 취소 화면 서비스 ⇒ cancelOrder()
 - [ ]  #3 김성훈
-    - [ ]  상점용 :: 대기주문 목록 서비스 ⇒ handleWaitingOrder()
-    - [ ]  상점용 :: 완료주문 목록 서비스 ⇒ selectCompletedOrders()
+    - [x]  상점용 :: 대기주문 목록 서비스 ⇒ handleWaitingOrder()
+    - [x]  상점용 :: 완료주문 목록 서비스 ⇒ selectCompletedOrders()
 - [ ]  #4 장하람
-    - [ ]  상점용 :: 상품 생성 서비스 ⇒ createProduct()
-    - [ ]  상점용 :: 상품 삭제 서비스 ⇒ removeProduct()
+    - [x]  상점용 :: 상품 생성 서비스 ⇒ createProduct()
+    - [x]  상점용 :: 상품 삭제 서비스 ⇒ removeProduct()
 
 # 코딩 컨벤션
 [노션링크](https://vanillacake369.notion.site/7e6bc353c0f54197920f485fd1f5fbff?pvs=4)
