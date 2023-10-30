@@ -3,15 +3,15 @@ package main.domain.order;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import main.domain.product.Product;
 
 public class HandleWaitingOrder {
     List<Order> orders = new ArrayList<>();
-    List<CompletedOrder> completedOrders = new ArrayList<>(); // 56번에 사용할 CompletedOrder 리스트
-    private static Scanner sc = new Scanner(System.in); // 34번, 48번 번호 입력 받기
-    private static final String NUMBER_REG = "^[0-9]*$"; // 36번줄 정규 표현식 => 주문 번호 입력
+    List<CompletedOrder> completedOrders = new ArrayList<>(); // CompletedOrder 리스트
+    private static Scanner sc = new Scanner(System.in); // 번호 입력 받기
+    CheckNumber checkNumber = new CheckNumber();
+
 
     public HandleWaitingOrder() {
         orders.forEach(bill -> {
@@ -28,12 +28,16 @@ public class HandleWaitingOrder {
             System.out.println("완료시킬 주문 번호를 입력해주세요." +
                     "\n뒤로 가고 싶다면 0번을 입력해주세요");
 
-            String handleNumber = sc.nextLine();// 16번 줄을 이용하여 주문 번호 입력 받는다.
+            String handleNumber = sc.nextLine();// 주문 번호 입력 받는다.
 
-            if (!Pattern.matches(NUMBER_REG, handleNumber)) {
-                System.out.println("숫자를 입력해주세요.");
+            try {
+                checkNumber.checkingInput(handleNumber);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
                 continue;
-            }                                           // 입력값이 숫자가 아니면 재시작
+            }                                   // 잘못된 입력이 들어오면 예외처리 한다.
+
+
 
             if (handleNumber.equals("0")) { // 주문 번호가 0번 이면 while문 종료
                 break;
@@ -44,10 +48,13 @@ public class HandleWaitingOrder {
 
                 String doneItNumber = sc.nextLine(); // 주문의 완료 여부를 결정한다.
 
-                if (!Pattern.matches(NUMBER_REG, doneItNumber)) {   // 입력값이 숫자가 아니면 재시작
-                    System.out.println("숫자를 입력해주세요.");
+                try {
+                    checkNumber.checkingInput(doneItNumber);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                     continue;
-                }
+                }                                           // 잘못된 입력이 들어오면 예외처리 한다.
+
                 switch (Integer.parseInt(doneItNumber)) {
                     case 1:
                         completedOrders.add((CompletedOrder) orders.get(Integer.parseInt(handleNumber) - 1));
@@ -68,4 +75,3 @@ public class HandleWaitingOrder {
         }
     }
 }
-
