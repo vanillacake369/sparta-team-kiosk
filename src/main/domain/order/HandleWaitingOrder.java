@@ -3,14 +3,13 @@ package main.domain.order;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import main.domain.product.Product;
 
 public class HandleWaitingOrder {
     List<Order> orders = new ArrayList<>();
-    List<CompletedOrder> completedOrders = new ArrayList<>(); // 56번에 사용할 CompletedOrder 리스트
-    private static Scanner sc = new Scanner(System.in); // 34번, 48번 번호 입력 받기
+    List<CompletedOrder> completedOrders = new ArrayList<>(); // CompletedOrder 리스트
+    private static Scanner sc = new Scanner(System.in); // 번호 입력 받기
     CheckNumber checkNumber = new CheckNumber();
 
 
@@ -29,14 +28,14 @@ public class HandleWaitingOrder {
             System.out.println("완료시킬 주문 번호를 입력해주세요." +
                     "\n뒤로 가고 싶다면 0번을 입력해주세요");
 
-            String handleNumber = sc.nextLine();// 16번 줄을 이용하여 주문 번호 입력 받는다.
+            String handleNumber = sc.nextLine();// 주문 번호 입력 받는다.
 
             try {
                 checkNumber.checkingInput(handleNumber);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 continue;
-            }
+            }                                   // 잘못된 입력이 들어오면 예외처리 한다.
 
 
 
@@ -54,7 +53,7 @@ public class HandleWaitingOrder {
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                     continue;
-                }
+                }                                           // 잘못된 입력이 들어오면 예외처리 한다.
 
                 switch (Integer.parseInt(doneItNumber)) {
                     case 1:
