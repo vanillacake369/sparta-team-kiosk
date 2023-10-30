@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.domain.menu.service.ClientMenuService;
 import main.domain.product.Product;
 import main.kiosk.MenuBoard;
 import org.junit.jupiter.api.BeforeEach;

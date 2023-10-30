@@ -1,4 +1,4 @@
-package main.domain.menu;
+package main.domain.menu.view;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
