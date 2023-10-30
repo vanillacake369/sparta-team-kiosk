@@ -1,10 +1,10 @@
-package service;
+package main.domain.product;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class CreateProductService {
-    public static void createProduct(Scanner scanner, List<StoreProducts> products, int nextProductId) {
+    public static void createProduct(Scanner scanner, List<Product> products, int nextProductId) {
         System.out.print("상품 이름: ");
         String name = scanner.next();
 
@@ -21,7 +21,8 @@ public class CreateProductService {
             }
         }
 
-        StoreProducts product = new StoreProducts(nextProductId, name, price);
+//        StoreProducts product = new StoreProducts(nextProductId, name, price);
+        Product product = Product.createProduct(name, price, "상품 설명");
         products.add(product);
         System.out.println("상품 생성 완료. 상품 ID: " + nextProductId);
     }
